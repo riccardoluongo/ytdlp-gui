@@ -45,7 +45,7 @@ class MyLogger(object):
 def progr_hook(d):
         def my_hook(d):
             if d['status'] == 'downloading':
-               print(+d['_percent_str']+" ETA:"+d['_eta_str']+" Speed:" + d['_speed_str'])
+               print(d['_percent_str']+" ETA:"+d['_eta_str']+" Speed:" + d['_speed_str'])
             if d['status'] == 'finished':
                print('Finishing the download...')   
         Thread(target=my_hook(d)).start()
@@ -144,6 +144,9 @@ def askdir():
 def open_file():
    os.startfile(f'{savedir}/{filename}{open_format}')
 
+def open_settings():
+    os.startfile('.env')
+
 class PrintLogger(object):
 
     def __init__(self, textbox):
@@ -157,9 +160,6 @@ class PrintLogger(object):
 
     def flush(self):
         pass
-
-def open_settings():
-    os.startfile('.env')
 
 class MainGUI(Tk):
     def __init__(self):
@@ -184,9 +184,13 @@ class MainGUI(Tk):
         label="File",
         menu=file_menu
         )
+        file_menu.add_command(
+        label='Quit',
+        command=self.destroy
+        )
 
-        myLabel = tkinter.Label(self.root, text='Video/playlist link:')
-        myLabel.grid(row=0, column=0)
+        mainLabel = tkinter.Label(self.root, text='Video/playlist link:')
+        mainLabel.grid(row=0, column=0)
 
         e  = tkinter.Entry(self.root, width=95)
         e.grid(row=1, column=0)
@@ -221,10 +225,13 @@ class MainGUI(Tk):
         self.log_widget.config(state="disabled")
 
         def paste():
-          e.insert(0, self.clipboard_get())
-        
+          try: 
+              e.insert(0, self.clipboard_get())
+          except:
+              pass
         paste_bt = Button(self.root, text="Paste", command=paste)
         paste_bt.grid(row=1, column=1, padx=5, pady=5)
+
         logger = PrintLogger(self.log_widget)
         sys.stdout = logger
         sys.stderr = logger
