@@ -1,8 +1,6 @@
 # ytdlp-gui
 ytdlp-gui is a gui front end for yt-dlp written in python using tkinter.
 
-![alt text](https://imgur.com/a/qVJVpac)
-
 SUPPORTED OS
 For now it only works on Windows, but support for other operating systems will be added in the future.
 
