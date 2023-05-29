@@ -8,7 +8,7 @@ For now it only works on Windows, but support for other operating systems will b
 INSTALLATION
 
 To install on Windows, download the latest release and run the installer.
-During the installation a cmd window will pop up. If ffmpeg (required) is not installed on your system, it will install it and then it will ask you to press "Y"
+During the installation and when you first start the app a cmd window will pop up to install the dependencies, do NOT close it.
 
 CONFIGURATION
 
