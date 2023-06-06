@@ -1,4 +1,3 @@
-# ytdlp-gui
 ytdlp-gui is a gui front end for yt-dlp written in python using tkinter.
 
 <h2>SUPPORTED OS</h2>
