@@ -12,7 +12,7 @@ During the installation and when you first start the app a cmd window will pop u
 On Ubuntu, first install the requirements:
 ```
 apt update
-apt install git python3 python3-pip python3-tk
+apt install git python3 python3-pip python3-tk ffmpeg
 pip install yt_dlp python-dotenv
 ```
 Clone the repository:
