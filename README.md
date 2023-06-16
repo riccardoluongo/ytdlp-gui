@@ -2,7 +2,8 @@ ytdlp-gui is a gui front end for yt-dlp written in python using tkinter.
 
 <h2>SUPPORTED OS</h2>
 
-For now it only works on Windows, but support for other operating systems will be added in the future.
+Windows and Debian-based linux distros are supported (check below for the installation guide).
+You might be able to run the program on other distros but it's not guaranteed that it will work since i have not tested it yet.
 
 <h2>INSTALLATION</h2>
 
