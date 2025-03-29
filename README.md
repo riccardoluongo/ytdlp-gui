@@ -1,3 +1,6 @@
+# WARNING
+THIS PROGRAM'S DEVELOPMENT IS CURRENTLY SUSPENDED AND IT DOES NOT WORK BECAUSE OF OUTDATED DEPENDENCIES BUNDLED IN THE PYINSTALLER PACKAGE
+-----------------------------------------------------------
 ytdlp-gui is a gui front end for yt-dlp written in python using tkinter.
 
 <h2>SUPPORTED OS</h2>
